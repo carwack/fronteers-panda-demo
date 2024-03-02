@@ -1,0 +1,99 @@
+---
+import { css } from '../../styled-system/css';
+import { center, hstack, vstack } from '../../styled-system/patterns';
+---
+
+<div class={center({ h: 'full' })}>
+  <div
+    class={vstack({
+      gap: '2',
+      alignItems: 'start',
+      p: '5',
+      maxW: '320px',
+      border: 'black solid 1px',
+      color: { base: 'black', _dark: 'white' },
+    })}
+  >
+    <img
+      class={css({ borderRadius: 'md' })}
+      src="https://bit.ly/2k1H1t6"
+      alt="indoor of appartment"
+    />
+    <div class={hstack({ alignItems: 'baseline' })}>
+      <span
+        class={css({
+          verticalAlign: 'center',
+          paddingInline: '1',
+          textTransform: 'uppercase',
+          fontSize: 'xs',
+          fontWeight: 'bold',
+          borderRadius: 'sm',
+          background: 'pink.200',
+          color: 'pink.800',
+        })}
+      >
+        Plus
+      </span>
+      <span
+        class={css({
+          textTransform: 'uppercase',
+          fontSize: 'sm',
+          fontWeight: 'bold',
+          color: 'pink.800',
+        })}
+      >
+        Verified &bull; Cape Town
+      </span>
+    </div>
+    <div
+      class={css({
+        fontSize: 'xl',
+        fontWeight: 'semibold',
+        lineHeight: 'short',
+      })}
+    >
+      Modern, Chic Penthouse with Mountain, City & Sea Views
+    </div>
+    <div>$119/night</div>
+    <div class={hstack({ alignItems: 'baseline' })}>
+      ⭐
+      <span class={css({ fontSize: 'sm' })}>
+        <b>4.84</b> (190)
+      </span>
+    </div>
+    <button class={css({
+      backgroundColor: 'white',
+      border: '1px solid #222222',
+      borderRadius: '8px',
+      boxSizing: 'border-box',
+      color: '#222222',
+      cursor: 'pointer',
+      display: 'inline-block',
+      fontSize: '16px',
+      fontWeight: '600',
+      lineHeight: '20px',
+      margin: '0',
+      outline: 'none',
+      padding: '13px 23px',
+      position: 'relative',
+      textAlign: 'center',
+      textDecoration: 'none',
+      touchAction: 'manipulation',
+      transition: 'box-shadow .2s,-ms-transform .1s,-webkit-transform .1s,transform .1s',
+      userSelect: 'none',
+      width: 'full',
+      _hover: {
+        backgroundColor: '#F7F7F7',
+      },
+      _active: {
+        backgroundColor: '#F7F7F7',
+        borderColor: '#000000',
+        transform: 'scale(.96)',
+      },
+      _focusVisible: {
+        boxShadow: '#222222 0 0 0 2px, rgba(255, 255, 255, 0.8) 0 0 0 4px',
+        transition: 'box-shadow .2s',
+      },
+    })}>Rent</button>
+  </div>
+</div>

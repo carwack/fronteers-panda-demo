@@ -1,5 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import AirbnbCard from '@components/AirbnbCard.astro';
 
 import { css } from '@styled-system/css';
 ---
@@ -7,5 +8,6 @@ import { css } from '@styled-system/css';
 <Layout title="Welcome to Astro.">
 	<main>
 		<h1 class={css({fontSize: '4xl', fontWeight: 'extrabold', lineHeight: '1', textAlign: 'center', mb: '2'})}>Welcome to <span class={css({backgroundImage: 'var(--accent-gradient)', backgroundClip: 'text'})}>Astro</span></h1>
+		<AirbnbCard />
 	</main>
 </Layout>
