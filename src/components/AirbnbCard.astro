@@ -28,8 +28,8 @@ import { center, hstack, vstack } from '../../styled-system/patterns';
           fontSize: 'xs',
           fontWeight: 'bold',
           borderRadius: 'sm',
-          background: 'pink.200',
-          color: 'pink.800',
+          background: 'airbnb.accent',
+          color: 'airbnb.accentLight',
         })}
       >
         Plus
@@ -39,7 +39,7 @@ import { center, hstack, vstack } from '../../styled-system/patterns';
           textTransform: 'uppercase',
           fontSize: 'sm',
           fontWeight: 'bold',
-          color: 'pink.800',
+          color: 'airbnb.accent',
         })}
       >
         Verified &bull; Cape Town
@@ -62,17 +62,14 @@ import { center, hstack, vstack } from '../../styled-system/patterns';
       </span>
     </div>
     <button class={css({
-      backgroundColor: 'white',
-      border: '1px solid #222222',
-      borderRadius: '8px',
+      backgroundColor: 'button.bg',
+      border: '1px solid token(colors.button.black)',
+      borderRadius: 'md',
       boxSizing: 'border-box',
-      color: '#222222',
+      color: 'button.black',
       cursor: 'pointer',
       display: 'inline-block',
-      fontSize: '16px',
-      fontWeight: '600',
-      lineHeight: '20px',
-      margin: '0',
+      fontSize: 'md',
       outline: 'none',
       padding: '13px 23px',
       position: 'relative',
@@ -83,15 +80,15 @@ import { center, hstack, vstack } from '../../styled-system/patterns';
       userSelect: 'none',
       width: 'full',
       _hover: {
-        backgroundColor: '#F7F7F7',
+        backgroundColor: 'button.bg.state',
       },
       _active: {
-        backgroundColor: '#F7F7F7',
-        borderColor: '#000000',
+        backgroundColor: 'button.bg.state',
+        borderColor: 'black',
         transform: 'scale(.96)',
       },
       _focusVisible: {
-        boxShadow: '#222222 0 0 0 2px, rgba(255, 255, 255, 0.8) 0 0 0 4px',
+        boxShadow: '{colors.button.black} 0 0 0 2px, rgba(255, 255, 255, 0.8) 0 0 0 4px',
         transition: 'box-shadow .2s',
       },
     })}>Rent</button>
