@@ -2,66 +2,68 @@
 import { css, cva } from '../../styled-system/css';
 import { center, hstack, vstack } from '../../styled-system/patterns';
 
-const button = cva({
-  base: {
-    borderRadius: 'md',
-    boxSizing: 'border-box',
-    cursor: 'pointer',
-    display: 'inline-block',
-    fontSize: 'md',
-    outline: 'none',
-    padding: '13px 23px',
-    position: 'relative',
-    textAlign: 'center',
-    textDecoration: 'none',
-    touchAction: 'manipulation',
-    transition: 'box-shadow .2s,-ms-transform .1s,-webkit-transform .1s,transform .1s',
-    userSelect: 'none',
-    width: 'full',
-    _active: {
-      transform: 'scale(.96)',
-    },
-    _focusVisible: {
-      transition: 'box-shadow .2s',
-    },
-  },
-  defaultVariants: {
-    variant: 'solid',
-  },
-  variants: {
-    variant: {
-      outline: {
-        color: 'button.black',
-        backgroundColor: 'button.bg',
-        border: '1px solid token(colors.button.black)',
-        _hover: {
-          backgroundColor: 'button.bg.state',
-        },
-        _active: {
-          transform: 'scale(.96)',
-        },
-        _focusVisible: {
-          boxShadow: '{colors.button.black} 0 0 0 2px, rgba(255, 255, 255, 0.8) 0 0 0 4px',
-        },
-      },
-      solid: {
-        color: 'white',
-        backgroundColor: 'button.black',
-        _hover: {
-          backgroundColor: 'black',
-        },
-        _active: {
-          backgroundColor: 'black',
-          borderColor: 'black',
-          transform: 'scale(.96)',
-        },
-        _focusVisible: {
-          boxShadow: '{colors.button.black} 0 0 0 2px, rgba(255, 255, 255, 0.8) 0 0 0 4px',
-        },
-      },
-      }
-  }
-})
+import buttonStyle from './ui/Button.style'
+
+// const buttonStyle = cva({
+//   base: {
+//     borderRadius: 'md',
+//     boxSizing: 'border-box',
+//     cursor: 'pointer',
+//     display: 'inline-block',
+//     fontSize: 'md',
+//     outline: 'none',
+//     padding: '13px 23px',
+//     position: 'relative',
+//     textAlign: 'center',
+//     textDecoration: 'none',
+//     touchAction: 'manipulation',
+//     transition: 'box-shadow .2s,-ms-transform .1s,-webkit-transform .1s,transform .1s',
+//     userSelect: 'none',
+//     width: 'full',
+//     _active: {
+//       transform: 'scale(.96)',
+//     },
+//     _focusVisible: {
+//       transition: 'box-shadow .2s',
+//     },
+//   },
+//   defaultVariants: {
+//     variant: 'solid',
+//   },
+//   variants: {
+//     variant: {
+//       outline: {
+//         color: 'button.black',
+//         backgroundColor: 'button.bg',
+//         border: '1px solid token(colors.button.black)',
+//         _hover: {
+//           backgroundColor: 'button.bg.state',
+//         },
+//         _active: {
+//           transform: 'scale(.96)',
+//         },
+//         _focusVisible: {
+//           boxShadow: '{colors.button.black} 0 0 0 2px, rgba(255, 255, 255, 0.8) 0 0 0 4px',
+//         },
+//       },
+//       solid: {
+//         color: 'white',
+//         backgroundColor: 'button.black',
+//         _hover: {
+//           backgroundColor: 'black',
+//         },
+//         _active: {
+//           backgroundColor: 'black',
+//           borderColor: 'black',
+//           transform: 'scale(.96)',
+//         },
+//         _focusVisible: {
+//           boxShadow: '{colors.button.black} 0 0 0 2px, rgba(255, 255, 255, 0.8) 0 0 0 4px',
+//         },
+//       },
+//       }
+//   }
+// })
 ---
 
 <div class={center({ h: 'full' })}>
@@ -122,7 +124,7 @@ const button = cva({
         <b>4.84</b> (190)
       </span>
     </div>
-    <button class={button()}>Rent</button>
-    <button class={button({variant: 'outline'})}>More details</button>
+    <button class={buttonStyle()}>Rent</button>
+    <button class={buttonStyle({variant: 'outline'})}>More details</button>
   </div>
 </div>
