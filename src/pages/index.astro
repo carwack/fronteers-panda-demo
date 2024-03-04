@@ -1,13 +1,16 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import AirbnbCard from '@components/AirbnbCard.astro';
+import SneakerCard from '@components/SneakerCard.astro';
 
 import { css } from '@styled-system/css';
 ---
 
 <Layout title="Welcome to Astro.">
 	<main>
-		<h1 class={css({fontSize: '4xl', fontWeight: 'extrabold', lineHeight: '1', textAlign: 'center', mb: '2'})}>Welcome to <span class={css({backgroundImage: 'var(--accent-gradient)', backgroundClip: 'text'})}>Astro</span></h1>
+		<h1 class={css({fontSize: '4xl', fontWeight: 'extrabold', lineHeight: '1', textAlign: 'center', my: '8'})}>Welcome to <span class={css({backgroundImage: 'var(--accent-gradient)', backgroundClip: 'text'})}>Astro</span></h1>
 		<AirbnbCard />
+		<div class={css({my: '8'})} />
+		<SneakerCard />
 	</main>
 </Layout>

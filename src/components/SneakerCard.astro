@@ -1,0 +1,136 @@
+---
+import { css, cva } from '@styled-system/css';
+import { center, hstack, vstack } from '@styled-system/patterns';
+
+import buttonStyle from '@styles/components/Button.style';
+import { button } from '@styled-system/recipes';
+
+// const buttonStyle = cva({
+//   base: {
+//     borderRadius: 'md',
+//     boxSizing: 'border-box',
+//     cursor: 'pointer',
+//     display: 'inline-block',
+//     fontSize: 'md',
+//     outline: 'none',
+//     padding: '13px 23px',
+//     position: 'relative',
+//     textAlign: 'center',
+//     textDecoration: 'none',
+//     touchAction: 'manipulation',
+//     transition: 'box-shadow .2s,-ms-transform .1s,-webkit-transform .1s,transform .1s',
+//     userSelect: 'none',
+//     width: 'full',
+//     _active: {
+//       transform: 'scale(.96)',
+//     },
+//     _focusVisible: {
+//       transition: 'box-shadow .2s',
+//     },
+//   },
+//   defaultVariants: {
+//     variant: 'solid',
+//   },
+//   variants: {
+//     variant: {
+//       outline: {
+//         color: 'button.black',
+//         backgroundColor: 'button.bg',
+//         border: '1px solid token(colors.button.black)',
+//         _hover: {
+//           backgroundColor: 'button.bg.state',
+//         },
+//         _active: {
+//           transform: 'scale(.96)',
+//         },
+//         _focusVisible: {
+//           boxShadow: '{colors.button.black} 0 0 0 2px, rgba(255, 255, 255, 0.8) 0 0 0 4px',
+//         },
+//       },
+//       solid: {
+//         color: 'white',
+//         backgroundColor: 'button.black',
+//         _hover: {
+//           backgroundColor: 'black',
+//         },
+//         _active: {
+//           backgroundColor: 'black',
+//           borderColor: 'black',
+//           transform: 'scale(.96)',
+//         },
+//         _focusVisible: {
+//           boxShadow: '{colors.button.black} 0 0 0 2px, rgba(255, 255, 255, 0.8) 0 0 0 4px',
+//         },
+//       },
+//       }
+//   }
+// })
+---
+
+<div class={center({ h: 'full' })}>
+  <div
+    class={vstack({
+      gap: '2',
+      alignItems: 'center',
+      p: '5',
+      maxW: '320px',
+      border: 'token(sneaker.red) solid 1px',
+      color: { base: 'white', _dark: 'white' },
+      bg: 'sneaker.red',
+      boxShadow: 'xl',
+      borderRadius: 'md',
+    })}
+  >
+    <img
+      class={css({ borderRadius: 'md' })}
+      src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco,u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/20de9b49-876b-4428-9873-75780a0dd438/air-jordan-1-mid-se-herenschoenen-bcVdbQ.png"
+      alt="Nike sneakers"
+    />
+    <div class={hstack({ alignItems: 'baseline' })}>
+      <span
+        class={css({
+          verticalAlign: 'center',
+          paddingInline: '1',
+          textTransform: 'uppercase',
+          fontSize: 'xs',
+          fontWeight: 'bold',
+          borderRadius: 'sm',
+          background: 'sneaker.accent',
+          color: 'sneaker.accentLight',
+        })}
+      >
+        New
+      </span>
+      <span
+        class={css({
+          textTransform: 'uppercase',
+          fontSize: 'sm',
+          fontWeight: 'bold',
+          color: 'sneaker.accent',
+        })}
+      >
+        Men's Shoes
+      </span>
+    </div>
+    <div
+      class={css({
+        fontSize: '2xl',
+        fontWeight: 'semibold',
+        lineHeight: 'short',
+      })}
+    >
+      Air Jordan 1 Mid SE
+    </div>
+    <div class={css({ fontSize: 'sm'})}>
+      Inspired by the original AJ1, this mid-top edition maintains the iconic look you love while choice colours and crisp leather give it a distinct identity.
+    </div>
+    <div class={hstack({ alignItems: 'baseline' })}>
+      💸
+      <span class={css({ fontSize: 'md' })}>
+        € <b>149,99</b>
+      </span>
+    </div>
+    <button class={button()}>Buy</button>
+    <button class={buttonStyle({variant: 'outline'})}>More details</button>
+  </div>
+</div>

@@ -27,6 +27,11 @@ export default defineConfig({
               DEFAULT: { value: "white", description: "The default background color of the button" },
               state: { value: "#F7F7F7", description: "The background color of the button when in a state"},
             }
+          },
+          sneaker: {
+            red: { value: "#A62121", description: "The red color to use in sneakers"},
+            accent: { value: "{colors.gray.800}", description: "The accent color to use in sneakers"},
+            accentLight: { value: "{colors.gray.200}", description: "The light accent color to use in sneakers"},
           }
         }
       },
