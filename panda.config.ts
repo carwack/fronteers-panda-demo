@@ -1,5 +1,7 @@
 import { defineConfig } from "@pandacss/dev";
 
+import { buttonRecipe } from '@styles/recipes/Button.recipe'
+
 export default defineConfig({
   // Whether to use css reset
   preflight: true,
@@ -27,6 +29,9 @@ export default defineConfig({
             }
           }
         }
+      },
+      recipes: {
+        button: buttonRecipe
       }
     },
   },

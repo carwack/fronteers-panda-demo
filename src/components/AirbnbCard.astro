@@ -1,8 +1,9 @@
 ---
-import { css, cva } from '../../styled-system/css';
-import { center, hstack, vstack } from '../../styled-system/patterns';
+import { css, cva } from '@styled-system/css';
+import { center, hstack, vstack } from '@styled-system/patterns';
 
-import buttonStyle from './ui/Button.style'
+import buttonStyle from '@styles/components/Button.style';
+import { button } from '@styled-system/recipes'
 
 // const buttonStyle = cva({
 //   base: {
@@ -124,7 +125,7 @@ import buttonStyle from './ui/Button.style'
         <b>4.84</b> (190)
       </span>
     </div>
-    <button class={buttonStyle()}>Rent</button>
+    <button class={button()}>Rent</button>
     <button class={buttonStyle({variant: 'outline'})}>More details</button>
   </div>
 </div>
